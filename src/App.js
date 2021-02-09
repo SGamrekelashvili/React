@@ -1,4 +1,3 @@
-import './App.css';
 import React, { Component } from 'react';
 import {Container,Center,MainCenterDiv,SelectorDiv} from './components/Styled';
 import ProductsCard from './components/Products/Products';
