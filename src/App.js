@@ -38,17 +38,13 @@ export class App extends Component {
          <Center>
          <SelectorDiv>
          {!isLoader && 
-         <>
          <Selector  width='200px' onValueChange={this.onChange} categories={categories} />
-         </>
           }
          </SelectorDiv>
          <MainCenterDiv>
          {isLoader && <CircleLoader />}
          {!isLoader && 
-         <>
          <ProductsCard key={value} value={value} />
-         </>
           }
          </MainCenterDiv>
          </Center>
