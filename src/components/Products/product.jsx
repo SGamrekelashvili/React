@@ -1,15 +1,18 @@
 
 import React, { Component } from 'react';
-import {Products,ProductCard,ProductHeader} from '../Styled'
+import {Products,ProductCard,ProductImage,ProductInfo,H6,H5} from '../Styles/productStyle'
 
 
 const SingleProduct = ({ ...props }) => (
-        <ProductCard key={props.id}>
-        <h1>{props.title}</h1>
-        <ProductHeader>
-            <img width={50} height={50} alt={props.title} src={props.image}></img>
-        </ProductHeader>
-        </ProductCard>
+            <ProductCard key={props.key}>
+            <ProductImage>
+                <img  src={props.image} alt={props.title} />
+            </ProductImage>
+            <ProductInfo>
+                <H5>{props.title}</H5>
+                <H6>{props.price}$</H6>
+            </ProductInfo>
+            </ProductCard>
   )
 
 class Product extends Component {
@@ -26,6 +29,7 @@ class Product extends Component {
                 <SingleProduct
                 image={val.image}
                 title={val.title}
+                price={val.price}
                 key={idx}
                 />
                 )
